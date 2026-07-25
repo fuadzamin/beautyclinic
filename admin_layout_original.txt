@@ -1,0 +1,192 @@
+--- PART 4564 ---
+Created At: 2026-05-20T07:33:47Z
+Completed At: 2026-05-20T07:33:47Z
+File Path: `file:///c:/Users/m%20s%20i/Documents/coba%20coba/web%20klinik/frontend/src/components/AdminLayout.vue`
+Total Lines: 203
+Total Bytes: 8021
+Showing lines 1 to 100
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: <script setup>
+2: import { computed } from "vue";
+3: import { RouterView, useRoute, useRouter } from "vue-router";
+4: import { useAuthStore } from "@/stores/authStore";
+5: import { User, Settings, LogOut, MapPin, Search, Bell } from "lucide-vue-next";
+6: import { Button } from "@/components/ui/button";
+7: import {
+8:     DropdownMenu,
+9:     DropdownMenuContent,
+10:     DropdownMenuGroup,
+11:     DropdownMenuItem,
+12:     DropdownMenuLabel,
+13:     DropdownMenuSeparator,
+14:     DropdownMenuTrigger,
+15: } from "@/components/ui/dropdown-menu";
+16: import { Toaster } from "@/components/ui/sonner";
+17: import {
+18:     SidebarProvider,
+19:     SidebarInset,
+20:     SidebarTrigger,
+21: } from "@/components/ui/sidebar";
+22: import AppSidebar from "@/components/AppSidebar.vue";
+23: 
+24: const auth = useAuthStore();
+25: const route = useRoute();
+26: const router = useRouter();
+27: 
+28: const routeName = computed(() => {
+29:     if (route.name === "admin-dashboard") return "Dashboard Overview";
+30:     return route.name
+31:         ? route.name.replace("admin-", "").replace("-", " ")
+32:         : "Dashboard";
+33: });
+34: 
+35: const handleLogout = async () => {
+36:     await auth.logout();
+37:     router.push("/login");
+38: };
+39: </script>
+40: 
+41: <template>
+42:     <SidebarProvider>
+43:         <div
+44:             class="flex h-screen w-full bg-slate-100 overflow-hidden p-4 md:p-6 gap-4 md:gap-6"
+45:         >
+46:             <AppSidebar />
+47: 
+48:             <SidebarInset
+49:                 class="flex flex-col min-w-0 overflow-hidden r
+<truncated 772 bytes>
+   {{ routeName }}
+64:                         </h2>
+65:                     </div>
+66: 
+67:                     <div class="flex items-center gap-3">
+68:                         <!-- Search & Notifications (Placeholders for premium feel) -->
+69:                         <Button
+70:                             variant="ghost"
+71:                             size="icon"
+72:                             class="text-slate-400 hover:text-slate-900 hidden sm:flex"
+73:                         >
+74:                             <Search class="w-5 h-5" />
+75:                         </Button>
+76:                         <Button
+77:                             variant="ghost"
+78:                             size="icon"
+79:                             class="text-slate-400 hover:text-slate-900 relative hidden sm:flex"
+80:                         >
+81:                             <Bell class="w-5 h-5" />
+82:                             <span
+83:                                 class="absolute top-2 right-2 w-2 h-2 bg-rose-500 rounded-full border-2 border-white"
+84:                             ></span>
+85:                         </Button>
+86: 
+87:                         <div
+88:                             class="h-6 w-[1px] bg-slate-200 mx-2 hidden sm:block"
+89:                         ></div>
+90: 
+91:                         <!-- Branch Info -->
+92:                         <div
+93:                             class="hidden lg:flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-full border border-slate-100 text-xs font-medium text-slate-600"
+94:                         >
+95:                             <MapPin class="w-3.5 h-3.5 text-gold-500" />
+96:                             <span>{{
+97:                                 auth.user?.branch?.name || "Pusat"
+98:                             }}</span>
+99:                         </div>
+100: 
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+
+--- PART 4566 ---
+Created At: 2026-05-20T07:33:49Z
+Completed At: 2026-05-20T07:33:50Z
+File Path: `file:///c:/Users/m%20s%20i/Documents/coba%20coba/web%20klinik/frontend/src/components/AdminLayout.vue`
+Total Lines: 203
+Total Bytes: 8021
+Showing lines 100 to 203
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+100: 
+101:                         <!-- User Menu -->
+102:                         <DropdownMenu>
+103:                             <DropdownMenuTrigger as-child>
+104:                                 <Button
+105:                                     variant="ghost"
+106:                                     class="relative h-10 w-10 rounded-full border-2 border-gold-100 p-0 overflow-hidden hover:border-gold-300 transition-all"
+107:                                 >
+108:                                     <div
+109:                                         class="w-full h-full bg-slate-100 flex items-center justify-center text-slate-500"
+110:                                     >
+111:                                         <User class="w-5 h-5" />
+112:                                     </div>
+113:                                 </Button>
+114:                             </DropdownMenuTrigger>
+115:                             <DropdownMenuContent class="w-64" align="end">
+116:                                 <DropdownMenuLabel class="font-normal">
+117:                                     <div class="flex flex-col space-y-1">
+118:                                         <p
+119:                                             class="text-sm font-bold leading-none text-slate-900"
+120:                                         >
+121:                                             {{ auth.user?.name }}
+122:                                         </p>
+123:                                         <p
+124:                                             class="
+<truncated 1311 bytes>
+46:                                     @click="handleLogout"
+147:                                     class="text-rose-600 focus:text-rose-600"
+148:                                 >
+149:                                     <LogOut class="mr-2 h-4 w-4" />
+150:                                     <span>Keluar</span>
+151:                                 </DropdownMenuItem>
+152:                             </DropdownMenuContent>
+153:                         </DropdownMenu>
+154:                     </div>
+155:                 </header>
+156: 
+157:                 <!-- Page Content -->
+158:                 <div
+159:                     class="flex-1 overflow-auto bg-slate-50/50 p-6 md:p-10 lg:p-12"
+160:                 >
+161:                     <div class="max-w-7xl mx-auto">
+162:                         <RouterView v-slot="{ Component }">
+163:                             <transition name="page" mode="out-in">
+164:                                 <component :is="Component" />
+165:                             </transition>
+166:                         </RouterView>
+167:                     </div>
+168:                 </div>
+169:             </SidebarInset>
+170:         </div>
+171:     </SidebarProvider>
+172:     <Toaster />
+173: </template>
+174: 
+175: <style>
+176: /* Page Transition */
+177: .page-enter-active,
+178: .page-leave-active {
+179:     transition:
+180:         opacity 0.2s ease,
+181:         transform 0.2s ease;
+182: }
+183: 
+184: .page-enter-from {
+185:     opacity: 0;
+186:     transform: translateY(10px);
+187: }
+188: 
+189: .page-leave-to {
+190:     opacity: 0;
+191:     transform: translateY(-10px);
+192: }
+193: 
+194: /* Custom Scrollbar */
+195: .scrollbar-hide::-webkit-scrollbar {
+196:     display: none;
+197: }
+198: .scrollbar-hide {
+199:     -ms-overflow-style: none;
+200:     scrollbar-width: none;
+201: }
+202: </style>
+203: 
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

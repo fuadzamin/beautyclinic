@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "laravel-best-practices": {
+      "source": "asyrafhussin/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/laravel-best-practices/SKILL.md",
+      "computedHash": "3f2351dc1821d430b6b58ce24175e0af11f5c11b234198bfc76a6702c05fe3ef"
+    },
+    "shadcn-vue": {
+      "source": "noartem/laravel-vue-skills",
+      "sourceType": "github",
+      "skillPath": "skills/shadcn-vue/SKILL.md",
+      "computedHash": "3ace3c05ee60c4059057dd528d9dbbbe11068270783312b08f956139a6e5e704"
+    }
+  }
+}

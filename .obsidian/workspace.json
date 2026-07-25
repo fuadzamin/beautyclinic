@@ -1,0 +1,186 @@
+{
+  "main": {
+    "id": "ff11a79f7a32f2b0",
+    "type": "split",
+    "children": [
+      {
+        "id": "75248a9a50c30f71",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7fb991df9f753e4b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Tampilan grafik"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "76b6cea8d3d51324",
+    "type": "split",
+    "children": [
+      {
+        "id": "28dae6c69c1548ec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "138805fe66086860",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Penjelajah berkas"
+            }
+          },
+          {
+            "id": "82ea423f7a5fa2e5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Penelusuran"
+            }
+          },
+          {
+            "id": "47305cf5b1dc435e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Penanda"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b027f304fd7ac0cc",
+    "type": "split",
+    "children": [
+      {
+        "id": "d91712c2318fbea8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0ca9562858552a91",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlink"
+            }
+          },
+          {
+            "id": "f7ce8eeb777607da",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Tautan Keluar"
+            }
+          },
+          {
+            "id": "3ceb3ba9332c0f3d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tag"
+            }
+          },
+          {
+            "id": "c49c4d288a3ed632",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Semua properti"
+            }
+          },
+          {
+            "id": "9a63f27e24d0863d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Kerangka"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Buka peralih cepat": false,
+      "graph:Buka tampilan grafik": false,
+      "canvas:Buat kanvas baru": false,
+      "daily-notes:Buka catatan hari ini": false,
+      "templates:Masukkan template": false,
+      "command-palette:Buka palet perintah": false,
+      "bases:Buat basis baru": false
+    }
+  },
+  "active": "7fb991df9f753e4b",
+  "lastOpenFiles": [
+    "beauty_clinic_prd.md",
+    "README.md",
+    "user_prompt.md",
+    "System prompt beauty clinic.md"
+  ]
+}

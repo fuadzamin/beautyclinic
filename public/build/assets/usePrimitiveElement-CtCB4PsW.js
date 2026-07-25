@@ -1,0 +1,1 @@
+import{u as r}from"./useForwardExpose-DBVESCHF.js";import{j as i,a5 as l}from"./main-DndCYBam.js";function a(){const e=l(),m=i(()=>{var t,n;return["#text","#comment"].includes((t=e.value)==null?void 0:t.$el.nodeName)?(n=e.value)==null?void 0:n.$el.nextElementSibling:r(e)});return{primitiveElement:e,currentElement:m}}export{a as u};

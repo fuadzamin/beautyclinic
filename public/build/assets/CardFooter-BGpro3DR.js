@@ -1,0 +1,1 @@
+import{c as a}from"./index-F1j94Lbf.js";import{a1 as t,o,a8 as c,Q as l,am as n}from"./main-DndCYBam.js";const u={__name:"CardFooter",props:{class:{type:[Boolean,null,String,Object,Array],required:!1,skipCheck:!0}},setup(e){const s=e;return(r,p)=>(t(),o("div",{class:l(n(a)("flex items-center p-6 pt-0",s.class))},[c(r.$slots,"default")],2))}};export{u as _};

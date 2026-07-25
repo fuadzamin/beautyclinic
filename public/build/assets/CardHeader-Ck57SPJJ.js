@@ -1,0 +1,1 @@
+import{c as r}from"./index-F1j94Lbf.js";import{a1 as o,o as l,a8 as t,Q as c,am as n}from"./main-DndCYBam.js";const i={__name:"CardHeader",props:{class:{type:[Boolean,null,String,Object,Array],required:!1,skipCheck:!0}},setup(e){const a=e;return(s,p)=>(o(),l("div",{class:c(n(r)("flex flex-col gap-y-1.5 p-6",a.class))},[t(s.$slots,"default")],2))}};export{i as _};

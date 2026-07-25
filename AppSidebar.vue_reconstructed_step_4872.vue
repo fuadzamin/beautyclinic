@@ -1,0 +1,66 @@
+--- PART 4463 ---
+Created At: 2026-05-20T07:17:04Z
+Completed At: 2026-05-20T07:17:04Z
+File Path: `file:///c:/Users/m%20s%20i/Documents/coba%20coba/web%20klinik/frontend/src/components/AppSidebar.vue`
+Total Lines: 129
+Total Bytes: 5390
+Showing lines 1 to 25
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: <script setup>
+2: import { computed, markRaw } from 'vue'
+3: import { useRouter, useRoute } from 'vue-router'
+4: import { useAuthStore } from '@/stores/authStore'
+5: import { 
+6:   Sparkles, LayoutDashboard, Calendar, ShoppingCart, 
+7:   Users, Settings, User, MapPin, Receipt, BarChart3,
+8:   Stethoscope, Boxes, History, LogOut
+9: } from 'lucide-vue-next'
+10: import {
+11:   Sidebar,
+12:   SidebarContent,
+13:   SidebarFooter,
+14:   SidebarGroup,
+15:   SidebarGroupLabel,
+16:   SidebarHeader,
+17:   SidebarMenu,
+18:   SidebarMenuButton,
+19:   SidebarMenuItem,
+20:   useSidebar
+21: } from '@/components/ui/sidebar'
+22: import { Button } from '@/components/ui/button'
+23: 
+24: const auth = useAuthStore()
+25: const router = useRouter()
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines
+Total Lines: 129
+Total Bytes: 5390
+Showing lines 60 to 85
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+60:       { label: 'Staff Management', to: '/admin/staff', icon: markRaw(Users), show: true },
+61:       { label: 'Branches', to: '/admin/branches', icon: markRaw(MapPin), show: auth.isOwner },
+62:       { label: 'Settings', to: '/admin/settings', icon: markRaw(Settings), show: true },
+63:     ]
+64:   }
+65: ])
+66: 
+67: const handleLogout = async () => {
+68:   await auth.logout()
+69:   router.push('/login')
+70: }
+71: </script>
+72: 
+73: <template>
+74:   <Sidebar collapsible="icon" class="bg-slate-950 text-slate-400 border-r border-slate-800 gap-10">
+75:     <SidebarHeader class="h-16 flex items-center justify-between px-4 border-b border-slate-800/50">
+76:       <div class="flex items-center gap-3 overflow-hidden">
+77:         <div class="w-8 h-8 rounded-lg bg-gold-500 flex items-center justify-center shrink-0">
+78:           <Sparkles class="w-5 h-5 text-white" />
+79:         </div>
+80:         <span v-if="state === 'expanded'" class="text-lg font-bold text-white tracking-tight">AURA CLINIC</span>
+81:       </div>
+82:     </SidebarHeader>
+83: 
+84:     <SidebarContent class="py-4 scrollbar-hide">
+85:       <SidebarGroup v-for="group in navGroups" :key="group.title" v-show="group.show">
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+72: 
