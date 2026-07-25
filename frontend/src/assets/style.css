@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
+  --color-gold-50: #F0FDFA;
+  --color-gold-100: #CCFBF1;
+  --color-gold-200: #99F6E4;
+  --color-gold-300: #5EEAD4;
+  --color-gold-400: #2DD4BF;
+  --color-gold-500: #0D9488;
+  --color-gold-600: #0F766E;
+  --color-gold-700: #115E59;
+  --color-gold-800: #134E4A;
+  --color-gold-900: #115E59;
+  --color-gold-950: #042F2E;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -33,32 +33,32 @@
 }
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --primary: 38 92% 50%;
+  --background: 166 76% 97%;
+  --foreground: 173 84% 5%;
+  --primary: 175 84% 32%;
   --primary-foreground: 0 0% 100%;
-  --border: 214.3 31.8% 91.4%;
+  --border: 172 65% 85%;
   --radius: 1rem;
 
-  --sidebar: 222.2 47.4% 11.2%;
-  --sidebar-foreground: 215 20.2% 65.1%;
-  --sidebar-primary: 38 92% 50%;
+  --sidebar: 175 84% 10%;
+  --sidebar-foreground: 172 30% 70%;
+  --sidebar-primary: 175 84% 32%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 222.2 47.4% 15%;
-  --sidebar-accent-foreground: 210 40% 98%;
-  --sidebar-border: 217.2 32.6% 17.5%;
-  --sidebar-ring: 38 92% 50%;
+  --sidebar-accent: 175 84% 15%;
+  --sidebar-accent-foreground: 175 40% 98%;
+  --sidebar-border: 175 50% 15%;
+  --sidebar-ring: 175 84% 32%;
   --sidebar-width: 16rem;
   --sidebar-width-icon: 3rem;
 }
 
 * {
-  border-color: hsl(var(--border, 214.3 31.8% 91.4%));
+  border-color: hsl(var(--border, 172 65% 85%));
 }
 
 body {
   @apply bg-background text-foreground antialiased;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .btn-primary {
