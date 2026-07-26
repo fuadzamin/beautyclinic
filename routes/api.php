@@ -31,6 +31,7 @@ Route::prefix('v1')->group(function () {
     // ── Public: Products ──────────────────────────────────────────────
     Route::get('products',        [ProductController::class, 'index']);
     Route::get('products/{product}', [ProductController::class, 'show']);
+    Route::get('products/{product}/reviews', [\App\Http\Controllers\ReviewController::class, 'index']);
 
     // ── Public: Appointment slots ─────────────────────────────────────
     Route::get('appointments/available-slots', [AppointmentController::class, 'availableSlots']);
@@ -61,6 +62,12 @@ Route::prefix('v1')->group(function () {
 
         // Order detail (customer)
         Route::get('orders/{order}', [OrderController::class, 'show']);
+
+        // Reviews (authenticated customer)
+        Route::post('reviews', [\App\Http\Controllers\ReviewController::class, 'store']);
+
+        // Loyalty points redemption
+        Route::post('loyalty/redeem', [\App\Http\Controllers\LoyaltyController::class, 'redeem']);
     });
 
     // ── Authenticated: Admin / Staff ──────────────────────────────────
